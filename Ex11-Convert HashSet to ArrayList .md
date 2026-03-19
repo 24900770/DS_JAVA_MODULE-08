@@ -16,33 +16,41 @@ To convert a collection of distinct integers stored in a HashSet into an ArrayLi
 Program to To convert a collection of distinct integers stored in a HashSet into an ArrayList and display its contents.
 Developed by: HARIHARAN M
 RegisterNumber: 212224100019
+
 */
 import java.util.*;
 
+import java.util.*;
+
 public class HashSetToArrayList {
+
+    public static ArrayList<Integer> convertToArrayList(HashSet<Integer> set) {
+        return new ArrayList<>(set);
+    }
+
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        HashSet<Integer> set = new HashSet<>();
+        for (int i = 0; i < n; i++) {
+            int num = sc.nextInt();
+            set.add(num);
+        }
 
-        // Creating a HashSet
-        HashSet<Integer> numbers = new HashSet<Integer>();
-        numbers.add(10);
-        numbers.add(20);
-        numbers.add(30);
-        numbers.add(40);
-        numbers.add(50);
-
-        // Converting HashSet to ArrayList
-        ArrayList<Integer> list = new ArrayList<Integer>(numbers);
-
-        // Displaying contents
-        System.out.println("HashSet elements: " + numbers);
-        System.out.println("ArrayList elements: " + list);
+        ArrayList<Integer> list = convertToArrayList(set);
+        System.out.println("ArrayList contents:");
+        for (int num : list) {
+            System.out.print(num + " ");
+        }
+        sc.close();
     }
 }
 ```
 
 ## Output:
 
-<img width="445" height="182" alt="Screenshot 2025-11-15 212604" src="https://github.com/user-attachments/assets/83bfba7d-6b6e-4b08-9fb7-de7df7c6d33c" />
+<img width="661" height="714" alt="image" src="https://github.com/user-attachments/assets/3e9d21b2-47e8-4f18-9551-a868d5321305" />
+
 
 
 ## Result:
