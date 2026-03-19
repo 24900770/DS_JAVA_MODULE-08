@@ -17,28 +17,45 @@ To write a Java program that adds elements from an array into a TreeSet and disp
 Program that adds elements from an array into a TreeSet and displays the elements in sorted order.
 Developed by: HARIHARAN M
 RegisterNumber: 212224100019
+
 */
 import java.util.*;
 
-public class ArrayToTreeSet
- {
-    public static void main(String[] args)
-{
+public class ArrayToTreeSet {
 
-        int[] arr = {40, 10, 50, 30, 20};
-        TreeSet<Integer> set = new TreeSet<Integer>();
-        for (int num : arr) {
-            set.add(num);
+    public static TreeSet<Integer> convertArrayToTreeSet(int[] arr) {
+        TreeSet<Integer> set = new TreeSet<>();
+        for (int a:arr)
+            set.add(a);
+        return set;
+
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
         }
-        System.out.println("Elements in TreeSet (Sorted Order): " + set);
+
+        TreeSet<Integer> treeSet = convertArrayToTreeSet(arr);
+        System.out.println("Elements in TreeSet:");
+        for (int num : treeSet) {
+            System.out.println(num);
+        }
+
+        sc.close();
     }
 }
+
 
 ```
 
 ## Output:
 
-<img width="622" height="153" alt="Screenshot 2025-11-15 213305" src="https://github.com/user-attachments/assets/0c3f947f-7981-4563-858a-b9005afce84d" />
+<img width="798" height="580" alt="image" src="https://github.com/user-attachments/assets/e3164f22-e559-4c04-9009-91292e909907" />
+
 
 
 
